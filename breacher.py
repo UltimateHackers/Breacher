@@ -18,7 +18,7 @@ print ('''\033[1;34m______   ______ _______ _______ _______ _     _ _______  ___
 |_____] |_____/ |______ |_____| |       |_____| |______ |_____/
 |_____] |    \_ |______ |     | |_____  |     | |______ |    \_
 
-                          \033[37mMade with \033[91m<3\033[37m By D3V\033[1;m''')
+						  \033[37mMade with \033[91m<3\033[37m By D3V\033[1;m''')
 
 print ('''\n  I am not responsible for your shit and if you get some error while
  running Breacher, there are good chances that target isn't responding.\n''')
@@ -61,37 +61,37 @@ def scan(links):
 			print ('  \033[1;31m[-]\033[1;m %s'% link)
 paths = [] #list of paths
 def get_paths(type):
-    try:
-        with open('paths.txt','r') as wordlist: #opens paths.txt and grabs links according to the type arguemnt
-            for path in wordlist: #too boring to describe
-                path = str(path.replace("\n",""))
-                try:
-            		if 'asp' in type:
-            			if 'html' in path or 'php' in path:
-            				pass
-                		else:
-               	 			paths.append(path)
-                	if 'php' in type:
-                		if 'asp' in path or 'html' in path:
-                			pass
-                		else:
-                			paths.append(path)
-                	if 'html' in type:
-                		if 'asp' in path or 'php' in path:
-                			pass
-                		else:
-                			paths.append(path)
-                except:
-                	paths.append(path)
-    except IOError:
-        print ('\033[1;31m[-]\033[1;m Wordlist not found!')
-        quit()
+	try:
+		with open('paths.txt','r') as wordlist: #opens paths.txt and grabs links according to the type arguemnt
+			for path in wordlist: #too boring to describe
+				path = str(path.replace("\n",""))
+				try:
+					if 'asp' in type:
+						if 'html' in path or 'php' in path:
+							pass
+						else:
+							paths.append(path)
+					if 'php' in type:
+						if 'asp' in path or 'html' in path:
+							pass
+						else:
+							paths.append(path)
+					if 'html' in type:
+						if 'asp' in path or 'php' in path:
+							pass
+						else:
+							paths.append(path)
+				except:
+					paths.append(path)
+	except IOError:
+		print ('\033[1;31m[-]\033[1;m Wordlist not found!')
+		quit()
 
 if args.fast == True: #if the user has supplied --fast argument
 	type = args.type #gets the input from --type argument
 	get_paths(type) #tells the link grabber to grab links according to user input like php, html, asp
-	paths1 = paths[:len(paths)/2] #The path/links list gets
-	paths2 = paths[len(paths)/2:] #divided into two lists
+	paths1 = paths[:len(paths)//2] #The path/links list gets
+	paths2 = paths[len(paths)//2:] #divided into two lists
 	def part1():
 		links = paths1 #it is the first part of the list
 		scan(links) #calls the scanner
