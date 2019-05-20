@@ -275,6 +275,7 @@
 /cms/admin/
 /cmsadmin/
 /cms/_admin/logon.php
+/cms-beheer
 /cms/login/
 /configuration/
 /configure/
