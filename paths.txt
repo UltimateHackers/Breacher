@@ -480,3 +480,8 @@
 /yonetim.asp
 /yonetim.html
 /yonetim.php
+/yonetim/
+/yonetiminkendisi/
+/yonetiminkendisi.asp
+/yonetiminkendisi.html
+/yonetiminkendisi.php
