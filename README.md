@@ -31,3 +31,5 @@ python breacher -u example.com --path /data
 #### Video Demo
 
 [![Breacher](https://i.imgur.com/D9my9A5.png)](https://youtu.be/BEpt5JmcWPk)
+
+### Do not use this tool for malicious things , If you does that only you will be responsible for the cause. 
